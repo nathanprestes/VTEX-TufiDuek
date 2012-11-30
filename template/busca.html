@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Tufi Duek</title>
+<vtex:metaTags/>
+<link rel="shortcut icon" href="/arquivos/favicon_tufi.ico" />
+<link rel="stylesheet" type="text/css" href="/arquivos/td_general.css" />
+<!--<link rel="stylesheet" type="text/css" href="/arquivos/td_nivoSlider.css" />-->
+<script type="text/javascript" src="/arquivos/td_menu.js"></script>
+<script type="text/javascript" src="/arquivos/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="/arquivos/infinityScroll.min.js"></script>
+<script type="text/javascript" src="/arquivos/td_interface.js"></script>
+<!--  SubTemplate: pngIeFix -->
+<vtex:template id="pngIeFix" />
+<!-- /SubTemplate: pngIeFix -->
+</head>
+
+<body>
+
+<div id="all">
+    <vtex:template id="header-tufiduek" />
+    <div id="content">
+        <div id="sideBar">
+            <div id="departmentNavigator" class="navigator">
+            	<!--  Controle: navegador de departamento -->
+    			<vtex.cmc:searchNavigator />
+    			<!-- /Controle: navegador de departamento -->
+    		</div>
+            
+            <div id="newsletter">
+                <vtex.cmc:newsletterOptIn />
+            </div>
+        </div>
+        <div id="breadCrumbs">
+    		<!--  Controle: breadcrumb -->
+			<vtex.cmc:breadCrumb />
+			<!-- /Controle: breadcrumb -->
+		</div>
+        <div id="collections">
+    		<div class="collectionWrap">
+				<!--  Controle: Resultado da busca / Lista de produtos -->
+				<vtex.cmc:searchResult layout="093ed009-4cab-4dee-b2b6-514a219ada2f" itemCount="12" columnCount="3" />
+				<!--  /Controle: Resultado da busca / Lista de produtos -->
+			</div>
+		</div>
+	</div>
+	<!--  SubTemplate: footer -->
+	<vtex:template id="footer-tufiduek" />
+	<!-- /SubTemplate: footer -->
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".prateleira[id*=ResultItems]").infinityScroll({
+        returnToTop:$('<div id="returnToTop"><a href="#"><span class="text">voltar ao</span><span class="text2">TOPO</span><span class="arrowToTop"></span></a></div>')
+    });
+});
+</script>
+
+</body>
+</html>

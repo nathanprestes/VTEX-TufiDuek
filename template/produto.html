@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+<head>
+<title>Forum</title>
+<vtex:metaTags/>
+<link rel="shortcut icon" href="/arquivos/favicon_tufi.ico" />
+<link rel="stylesheet" type="text/css" href="/arquivos/td_general.css" />
+<!--<link rel="stylesheet" type="text/css" href="/arquivos/td_nivoSlider.css" />-->
+<script type="text/javascript" src="/arquivos/td_menu.js"></script>
+<script type="text/javascript" src="/arquivos/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="/arquivos/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/arquivos/td_interface.js"></script>
+<!--  SubTemplate: pngIeFix -->
+<vtex:template id="pngIeFix" />
+<!-- /SubTemplate: pngIeFix -->
+</head>
+
+<body>
+
+<div id="all">
+    <vtex:template id="header-tufiduek" />
+    <div id="content">
+        <div id="breadCrumbs">
+        	<!--  Controle: breadcrumb -->
+			<vtex.cmc:breadCrumb />
+			<!-- /Controle: breadcrumb -->
+		</div>
+        <div id="produto">
+            <div id="productImage">
+                <span style="display:block; width:100%; text-align:right;font-size:12px;color:#7a7a7a;margin-bottom:4px;">Passe o mouse para ver os detalhes</span>
+                <vtex.cmc:ProductImage/>
+                <div id="videoProduto"></div>
+            </div>
+            
+            <div id="productInfos">
+        		<!--  Controle: nome do produto -->
+        		<h1><vtex.cmc:productName /></h1>
+        		<!-- /Controle: nome do produto -->
+                
+                <!--  Controle: preco do produto -->
+        		<div id="productPrice"><vtex.cmc:skuPrice /></div>
+        		<!-- /Controle: preco do produto -->
+                
+                <!--  Controle: seletor de sku -->
+                <vtex.cmc:skuRichSelection changeImage="1" />
+            	<!-- /Controle: seletor de sku -->
+                
+                <!--
+                <div id="variacoes">
+                <vtex:contentPlaceHolder id="Acessorios" />
+                </div>
+                -->
+        		
+        		<!--  Controle: botao comprar -->
+        		<vtex.cmc:BuyButton />
+        		<!-- /Controle: botao comprar -->
+                
+                <!--  Controle: lista -->
+            	<!--<div id="productList"><vtex.cmc:giftListInsertSku /></div>-->
+        		<!-- /Controle: lista -->
+                
+                <!--  Controle: descricao do produto -->
+            	<div id="productDescription">
+        			<h2 class="title">Descrição do Produto</h2>
+        			<vtex.cmc:ProductDescription />
+        		</div>
+                
+                <div id="productSpecification">
+            		<h2 class="title">Detalhes do Produto</h2>
+        			<vtex.cmc:productSpecification/>
+        		</div>
+        		<!-- /Controle: descricao do produto -->        		       
+
+            </div>
+            
+        		<div id="collections" class="vitrine">
+        			<!--  placeholders -->
+        			<vtex:contentPlaceHolder id="Acessorios" />
+        			<!-- /placeholders -->
+        		</div>
+        
+        		<!--  Controle: avaliacao do cliente -->
+        		<!--<vtex.cmc:UserReview />-->
+        		<!-- /Controle: avaliacao do cliente -->
+        	</div>
+           
+        </div>
+	<!--  SubTemplate: footer -->
+	<vtex:template id="footer-tufiduek" />
+	<!-- /SubTemplate: footer -->
+</div>
+
+</body>
+</html>
